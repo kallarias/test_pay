@@ -12,12 +12,14 @@
         <div class="description">
           {% if product %}
             {% for l in product %}
-                    <h5>Наименование: {{ l.name }} <br>
-                    <a href="{% url 'item' l.id %}"><button>Посмотреть</button></a>
+                    <h5>Наименование: {{ l.name }} <br> Краткая информация: {{ l.description }} <br>
+                      <form action="{% url 'create-checkout-session' l.id %}" method="POST">{% csrf_token %}
+                        <button type="submit" id="checkout-button">$ {{ l.get_display_prise }}</button>
+                      </form>
                     </h5><br>
             {% endfor %}
           {% else %}
-              <p>Товары отсутствуют! {{ product }}</p>
+              <p>Товар отсутствует! {{ product }}</p>
           {% endif %}
         </div>
       </div>

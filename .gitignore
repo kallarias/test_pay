@@ -1,3 +1,4 @@
 main.py
 venv
 .idea
+/pay_page/app_pay/settings.py

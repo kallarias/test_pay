@@ -1,5 +1,5 @@
 """
-ASGI config for pay_page project.
+ASGI config for app_pay project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pay_page.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app_pay.settings')
 
 application = get_asgi_application()
